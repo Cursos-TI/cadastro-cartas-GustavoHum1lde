@@ -14,6 +14,8 @@ int main()
   float area1;
   float pib1;
   int pontos1;
+  float densidade1;
+  float pibPerCapita1;
 
   char estado2[50];
   char codigo2[50];
@@ -22,6 +24,8 @@ int main()
   float area2;
   float pib2;
   int pontos2;
+  float densidade2;
+  float pibPerCapita2;
 
   // Área para entrada de dados
 
@@ -54,7 +58,7 @@ scanf("%d", &pontos1);
 
   char titulo2[20] = "Carta Nº2";
   char aviso2[20] = "Responda Abaixo";
-  printf("%s \n", titulo2);
+  printf("\n %s \n", titulo2);
   printf("%s \n \n", aviso2);
 
   // Carta Nº2
@@ -79,27 +83,39 @@ scanf("%d", &pontos1);
   printf("Quantos Pontos Turísticos possui:  \n");
   scanf("%d", &pontos2);
 
+  //Calculo da densidade demográfica e do PIB per capita para as cidades
+
+  densidade1 = populacao1 / area1;
+  pibPerCapita1 = pib1 / populacao1;
+
+  densidade2 = populacao2 / area2;
+  pibPerCapita2 = pib2 / populacao2;
+
   // Área para exibição dos dados da cidade
 
-  printf("%s \n \n", titulo1);
+  printf("\n %s \n", titulo1);
 
   printf("Estado: %s \n", estado1);
   printf("Código do Estado: %s \n", codigo1);
   printf("Cidade: %s \n", cidade1);
   printf("População: %d \n", populacao1);
-  printf("Área: %f \n", area1);
-  printf("PIB: %f \n", pib1);
+  printf("Área: %.2f km² \n", area1);
+  printf("PIB: %.2f bilhões de reais \n", pib1);
   printf("Quantos Pontos Turísticos: %d \n", pontos1);
+  printf("Densidade Demográfica: %.2f hab/km² \n", densidade1);
+  printf("PIB per Capita: %.2f reais \n", pibPerCapita1);
 
-  printf("%s \n \n", titulo2);
+  printf("\n %s \n", titulo2);
 
   printf("Estado: %s \n", estado2);
   printf("Código do Estado: %s \n", codigo2);
   printf("Cidade: %s \n", cidade2);
   printf("População: %d \n", populacao2);
-  printf("Área: %f \n", area2);
-  printf("PIB: %f \n", pib2);
+  printf("Área: %.2f km² \n", area2);
+  printf("PIB: %.2f bilhões de reais \n", pib2);
   printf("Quantos Pontos Turísticos: %d \n", pontos2);
+  printf("Densidade Demográfica: %.2f hab/km² \n", densidade2);
+  printf("PIB per Capita: %.2f reais \n", pibPerCapita2);
 
   return 0;
 }
