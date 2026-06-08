@@ -16,6 +16,7 @@ int main()
   int pontos1;
   float densidade1;
   float pibPerCapita1;
+  float inverso1;
 
   char estado2[50];
   char codigo2[50];
@@ -26,6 +27,7 @@ int main()
   int pontos2;
   float densidade2;
   float pibPerCapita2;
+  float inverso2;
 
   // Área para entrada de dados
 
@@ -36,25 +38,27 @@ int main()
 
   // Carta Nº1
   printf("Qual é o Estado:  \n");
-scanf("%s", estado1);
+  scanf("%s", estado1);
 
-printf("Qual é o Código:  \n");
-scanf("%s", codigo1);
+  printf("Qual é o Código:  \n");
+  scanf("%s", codigo1);
 
-printf("Qual é a Cidade:  \n");
-scanf("%s", cidade1);
+  printf("Qual é a Cidade:  \n");
+  scanf("%s", cidade1);
 
-printf("Quanto de População:  \n");
-scanf("%d", &populacao1);
+  printf("Quanto de População:  \n");
+  scanf("%d", &populacao1);
 
-printf("Qual a área:  \n");
-scanf("%f", &area1);
+  printf("Qual a área:  \n");
+  scanf("%f", &area1);
 
-printf("Qual o PIB:  \n");
-scanf("%f", &pib1);
+  printf("Qual o PIB:  \n");
+  scanf("%f", &pib1);
 
-printf("Quantos Pontos Turísticos possui:  \n");
-scanf("%d", &pontos1);
+  printf("Quantos Pontos Turísticos possui:  \n");
+  scanf("%d", &pontos1);
+
+  printf("\n--\n");
 
   char titulo2[20] = "Carta Nº2";
   char aviso2[20] = "Responda Abaixo";
@@ -83,7 +87,7 @@ scanf("%d", &pontos1);
   printf("Quantos Pontos Turísticos possui:  \n");
   scanf("%d", &pontos2);
 
-  //Calculo da densidade demográfica e do PIB per capita para as cidades
+  // Calculo da densidade demográfica e do PIB per capita para as cidades
 
   densidade1 = populacao1 / area1;
   pibPerCapita1 = pib1 / populacao1;
@@ -91,7 +95,13 @@ scanf("%d", &pontos1);
   densidade2 = populacao2 / area2;
   pibPerCapita2 = pib2 / populacao2;
 
+  // Inverso da Densidade
+
+  inverso1 = 1.0 / densidade1;
+  inverso2 = 1.0 / densidade2;
+
   // Área para exibição dos dados da cidade
+  printf("\n~~~~~~~~~~~~~~~~\n");
 
   printf("\n %s \n", titulo1);
 
@@ -104,6 +114,7 @@ scanf("%d", &pontos1);
   printf("Quantos Pontos Turísticos: %d \n", pontos1);
   printf("Densidade Demográfica: %.2f hab/km² \n", densidade1);
   printf("PIB per Capita: %.2f reais \n", pibPerCapita1);
+  printf("Inverso da Densidade: %.2f hab/km² \n", inverso1);
 
   printf("\n %s \n", titulo2);
 
@@ -116,6 +127,64 @@ scanf("%d", &pontos1);
   printf("Quantos Pontos Turísticos: %d \n", pontos2);
   printf("Densidade Demográfica: %.2f hab/km² \n", densidade2);
   printf("PIB per Capita: %.2f reais \n", pibPerCapita2);
+  printf("Inverso da Densidade: %.2f hab/km² \n", inverso2);
+
+  printf("\n--SUPER PODER-- \n \n");
+
+  // Super Poder
+
+  float poder1;
+  float poder2;
+
+  poder1 = populacao1 + area1 + pib1 + pontos1 + inverso1 + pibPerCapita1 + inverso1;
+
+  poder2 = populacao2 + area2 + pib2 + pontos2 + inverso2 + pibPerCapita2 + inverso2;
+
+  printf("Super Poder de %s é de: %.2f \n", cidade1, poder1);
+  printf("Super Poder de %s é de: %.2f \n", cidade2, poder2);
+
+  // Resultado
+
+  int VerificarPopulacao1;
+  int VerificarArea1;
+  int VerificarPIB1;
+  int VerificarPontos1;
+  int VerificarDensidade1;
+  int VerificarPerCapita1;
+  int VerificarPoder1;
+
+  int VerificarPopulacao2;
+  int VerificarArea2;
+  int VerificarPIB2;
+  int VerificarPontos2;
+  int VerificarDensidade2;
+  int VerificarPerCapita2;
+  int VerificarPoder2;
+
+  VerificarPopulacao1 = populacao1 > populacao2;
+  VerificarArea1 = area1 > area2;
+  VerificarPIB1 = pib1 > pib2;
+  VerificarPontos1 = pontos1 > pontos2;
+  VerificarDensidade1 = densidade1 < densidade2;
+  VerificarPerCapita1 = pibPerCapita1 > pibPerCapita2;
+  VerificarPoder1 = poder1 > poder2;
+
+  VerificarPopulacao2 = populacao2 > populacao1;
+  VerificarArea2 = area2 > area1;
+  VerificarPIB2 = pib2 > pib1;
+  VerificarPontos2 = pontos2 > pontos1;
+  VerificarDensidade2 = densidade2 < densidade1;
+  VerificarPerCapita2 = pibPerCapita2 > pibPerCapita1;
+  VerificarPoder2 = poder2 > poder1;
+
+  printf("\n--RESULTADO--\n");
+  printf("População: %s: %d | %s: %d \n", cidade1, VerificarPopulacao1, cidade2, VerificarPopulacao2);
+  printf("Area: %s: %d | %s: %d \n", cidade1, VerificarArea1, cidade2, VerificarArea2);
+  printf("PIB: %s: %d | %s: %d \n", cidade1, VerificarPIB1, cidade2, VerificarPIB2);
+  printf("Pontos Turísticos: %s: %d | %s: %d \n", cidade1, VerificarPontos1, cidade2, VerificarPontos2);
+  printf("Densidade: %s: %d | %s: %d \n", cidade1, VerificarDensidade1, cidade2, VerificarDensidade2);
+  printf("Densidade Per Capita: %s: %d | %s: %d \n", cidade1, VerificarPerCapita1, cidade2, VerificarPerCapita2);
+  printf("Super Poder: %s: %d | %s: %d \n", cidade1, VerificarPoder1, cidade2, VerificarPoder2);
 
   return 0;
 }
