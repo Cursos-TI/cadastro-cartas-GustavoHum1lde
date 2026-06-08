@@ -183,7 +183,7 @@ int main()
   printf("PIB: %s: %d | %s: %d \n", cidade1, VerificarPIB1, cidade2, VerificarPIB2);
   printf("Pontos Turísticos: %s: %d | %s: %d \n", cidade1, VerificarPontos1, cidade2, VerificarPontos2);
   printf("Densidade: %s: %d | %s: %d \n", cidade1, VerificarDensidade1, cidade2, VerificarDensidade2);
-  printf("Densidade Per Capita: %s: %d | %s: %d \n", cidade1, VerificarPerCapita1, cidade2, VerificarPerCapita2);
+  printf("PIB Per Capita: %s: %d | %s: %d \n", cidade1, VerificarPerCapita1, cidade2, VerificarPerCapita2);
   printf("Super Poder: %s: %d | %s: %d \n", cidade1, VerificarPoder1, cidade2, VerificarPoder2);
 
   return 0;
