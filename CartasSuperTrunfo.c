@@ -136,9 +136,9 @@ int main()
   float poder1;
   float poder2;
 
-  poder1 = populacao1 + area1 + pib1 + pontos1 + inverso1 + pibPerCapita1 + inverso1;
+  poder1 = populacao1 + area1 + pib1 + pontos1 + inverso1 + pibPerCapita1;
 
-  poder2 = populacao2 + area2 + pib2 + pontos2 + inverso2 + pibPerCapita2 + inverso2;
+  poder2 = populacao2 + area2 + pib2 + pontos2 + inverso2 + pibPerCapita2;
 
   printf("Super Poder de %s é de: %.2f \n", cidade1, poder1);
   printf("Super Poder de %s é de: %.2f \n", cidade2, poder2);
