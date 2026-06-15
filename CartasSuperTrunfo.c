@@ -2,7 +2,7 @@
 
 // Desafio Super Trunfo - Países
 // Tema 3 - Desafio 1: Nível Novato
-// Objetivo: No nível novato você deve criar as cartas representando as cidades utilizando scanf para entrada de dados e printf para exibir as informações.
+// Objetivo: Implementar o Comando IF no programa
 
 int main()
 {
