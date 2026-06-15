@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 // Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das cartas
+// Tema 3 - Desafio 1: Nível Novato
 // Objetivo: No nível novato você deve criar as cartas representando as cidades utilizando scanf para entrada de dados e printf para exibir as informações.
 
 int main()
@@ -144,47 +144,19 @@ int main()
   printf("Super Poder de %s é de: %.2f \n", cidade2, poder2);
 
   // Resultado
-
-  int VerificarPopulacao1;
-  int VerificarArea1;
-  int VerificarPIB1;
-  int VerificarPontos1;
-  int VerificarDensidade1;
-  int VerificarPerCapita1;
-  int VerificarPoder1;
-
-  int VerificarPopulacao2;
-  int VerificarArea2;
-  int VerificarPIB2;
-  int VerificarPontos2;
-  int VerificarDensidade2;
-  int VerificarPerCapita2;
-  int VerificarPoder2;
-
-  VerificarPopulacao1 = populacao1 > populacao2;
-  VerificarArea1 = area1 > area2;
-  VerificarPIB1 = pib1 > pib2;
-  VerificarPontos1 = pontos1 > pontos2;
-  VerificarDensidade1 = densidade1 < densidade2;
-  VerificarPerCapita1 = pibPerCapita1 > pibPerCapita2;
-  VerificarPoder1 = poder1 > poder2;
-
-  VerificarPopulacao2 = populacao2 > populacao1;
-  VerificarArea2 = area2 > area1;
-  VerificarPIB2 = pib2 > pib1;
-  VerificarPontos2 = pontos2 > pontos1;
-  VerificarDensidade2 = densidade2 < densidade1;
-  VerificarPerCapita2 = pibPerCapita2 > pibPerCapita1;
-  VerificarPoder2 = poder2 > poder1;
-
-  printf("\n--RESULTADO--\n");
-  printf("População: %s: %d | %s: %d \n", cidade1, VerificarPopulacao1, cidade2, VerificarPopulacao2);
-  printf("Area: %s: %d | %s: %d \n", cidade1, VerificarArea1, cidade2, VerificarArea2);
-  printf("PIB: %s: %d | %s: %d \n", cidade1, VerificarPIB1, cidade2, VerificarPIB2);
-  printf("Pontos Turísticos: %s: %d | %s: %d \n", cidade1, VerificarPontos1, cidade2, VerificarPontos2);
-  printf("Densidade: %s: %d | %s: %d \n", cidade1, VerificarDensidade1, cidade2, VerificarDensidade2);
-  printf("PIB Per Capita: %s: %d | %s: %d \n", cidade1, VerificarPerCapita1, cidade2, VerificarPerCapita2);
-  printf("Super Poder: %s: %d | %s: %d \n", cidade1, VerificarPoder1, cidade2, VerificarPoder2);
+  printf("\n--COMPARAÇÃO--\n");
+  
+  printf("\n==POPULAÇÃO==\n");
+  printf("%s: %d \n", cidade1, populacao1);
+  printf("%s: %d \n", cidade2, populacao2);
+  
+  
+  if (populacao1 > populacao2) {
+      printf("%s possui mais população que %s", cidade1, cidade2);
+  }
+  else {
+      printf("%s possui mais população que %s", cidade2, cidade1);
+  }
 
   return 0;
 }
