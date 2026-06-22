@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 // Desafio Super Trunfo - Países
-// Tema 3 - Desafio 1: Nível Novato
-// Objetivo: Implementar o Comando IF no programa
+// Tema 3 - Desafio: Aventureiro
+// Objetivo: Inserir Switch e Estruturas Aninhadas
 
 int main()
 {
@@ -144,19 +144,141 @@ int main()
   printf("Super Poder de %s é de: %.2f \n", cidade2, poder2);
 
   // Resultado
-  printf("\n--COMPARAÇÃO--\n");
+  int menu;
   
-  printf("\n==POPULAÇÃO==\n");
-  printf("%s: %d \n", cidade1, populacao1);
-  printf("%s: %d \n", cidade2, populacao2);
+  printf("\n \n");
+  printf("==MENU==");
+  printf("\n");
   
+  printf("1. População \n");
+  printf("2. Área \n");
+  printf("3. PIB \n");
+  printf("4. Pontos Turísticos \n");
+  printf("5. Densidade Demográfica \n");
+  printf("Escolha: ");
+  scanf("%i", &menu);
   
-  if (populacao1 > populacao2) {
-      printf("%s possui mais população que %s", cidade1, cidade2);
-  }
-  else {
-      printf("%s possui mais população que %s", cidade2, cidade1);
-  }
+  switch (menu){
+      case 1:
+      printf("\n~~~~~~~~~~~~~~~~~~~~~~\n");
+      printf("==POPULAÇÃO==");
+      printf("\n");
+      printf("%s: %d \n", cidade1, populacao1);
+      printf("%s: %d \n", cidade2, populacao2);
+      
+      if (populacao1 >= populacao2) {
 
+        if (populacao1 == populacao2) {
+            printf("Empate!\n");
+            
+        } 
+            else {
+            printf("%s venceu!\n", cidade1);
+        }
+      } 
+        else {
+        printf("%s venceu!\n", cidade2);
+    }
+    
+    break;
+    
+    case 2:
+      printf("\n~~~~~~~~~~~~~~~~~~~~~~\n");
+      printf("==ÁREA==");
+      printf("\n");
+      printf("%s: %2.f \n", cidade1, area1);
+      printf("%s: %2.f \n", cidade2, area2);
+      
+      if (area1 >= area2) {
+
+        if (area1 == area2) {
+            printf("Empate!\n");
+            
+        } 
+            else {
+            printf("%s venceu!\n", cidade1);
+        }
+      } 
+        else {
+        printf("%s venceu!\n", cidade2);
+    }
+    
+    break;
+  
+  
+  case 3:
+      printf("\n~~~~~~~~~~~~~~~~~~~~~~\n");
+      printf("==PIB==");
+      printf("\n");
+      printf("%s: %2.f \n", cidade1, pib1);
+      printf("%s: %2.f \n", cidade2, pib2);
+      
+      if (pib1 >= pib2) {
+
+        if (pib1 == pib2) {
+            printf("Empate!\n");
+            
+        } 
+            else {
+            printf("%s venceu!\n", cidade1);
+        }
+      } 
+        else {
+        printf("%s venceu!\n", cidade2);
+    }
+    
+    break;
+    
+    case 4:
+      printf("\n~~~~~~~~~~~~~~~~~~~~~~\n");
+      printf("==PONTOS TURÍSTICOS==");
+      printf("\n");
+      printf("%s: %d \n", cidade1, pontos1);
+      printf("%s: %d \n", cidade2, pontos2);
+      
+      if (pontos1 >= pontos2) {
+
+        if (pontos1 == pontos2) {
+            printf("Empate!\n");
+            
+        } 
+            else {
+            printf("%s venceu!\n", cidade1);
+        }
+      } 
+        else {
+        printf("%s venceu!\n", cidade2);
+    }
+    
+    break;
+    
+    case 5:
+      printf("\n~~~~~~~~~~~~~~~~~~~~~~\n");
+      printf("==DENSIDADE GEOGRÁFICA==");
+      printf("\n");
+      printf("%s: %2.f \n", cidade1, densidade1);
+      printf("%s: %2.f \n", cidade2, densidade2);
+      
+      if (densidade1 <= densidade2) {
+
+        if (densidade1 == densidade2) {
+            printf("Empate!\n");
+            
+        } 
+            else {
+            printf("%s venceu!\n", cidade1);
+        }
+      } 
+        else {
+        printf("%s venceu!\n", cidade2);
+    }
+    
+    break;
+    
+    default:
+    printf("Valor Inválido!");
+    break;
+    
+}
   return 0;
 }
